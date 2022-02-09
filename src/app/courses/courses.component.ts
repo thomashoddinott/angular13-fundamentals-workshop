@@ -37,4 +37,8 @@ export class CoursesComponent implements OnInit {
     this.selectedCourse = course
   }
 
+  deleteCourse(courseId) {
+    console.log('DELETE COURSE', courseId)
+  }
+
 }
