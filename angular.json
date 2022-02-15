@@ -75,7 +75,8 @@
               "browserTarget": "angular13-fundamentals-workshop:build:production"
             },
             "development": {
-              "browserTarget": "angular13-fundamentals-workshop:build:development"
+              "browserTarget": "angular13-fundamentals-workshop:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

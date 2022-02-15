@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -20,13 +19,15 @@ $angular13-fundamentals-workshop-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$angular13-fundamentals-workshop-theme: mat.define-light-theme((
-  color: (
-    primary: $angular13-fundamentals-workshop-primary,
-    accent: $angular13-fundamentals-workshop-accent,
-    warn: $angular13-fundamentals-workshop-warn,
+$angular13-fundamentals-workshop-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $angular13-fundamentals-workshop-primary,
+      accent: $angular13-fundamentals-workshop-accent,
+      warn: $angular13-fundamentals-workshop-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -62,7 +63,7 @@ p {
   flex-wrap: wrap;
 }
 
-.container [class*='col'] {
+.container [class*="col"] {
   padding: 10px;
   flex: 1;
 }
@@ -85,8 +86,7 @@ app-root {
 }
 
 mat-toolbar {
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   z-index: 1;
 }
 
@@ -231,6 +231,10 @@ mat-card-actions {
   align-items: center;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  &.active {
+    color: red !important;
+  }
 }
 
 // UI LOGIN
@@ -265,8 +269,7 @@ mat-card-actions {
   }
 
   mat-card {
-    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
-      0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 
     mat-card-header {
       margin-bottom: 10px;
@@ -375,11 +378,10 @@ mat-card-actions {
 
 // UI TOOLBAR
 mat-toolbar {
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
   z-index: 900;
 
-  >.mat-mini-fab {
+  > .mat-mini-fab {
     margin-right: 10px;
   }
 
@@ -402,5 +404,11 @@ mat-toolbar {
   }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
